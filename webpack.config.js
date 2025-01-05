@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), // Cartella di output per tutti i file
     filename: 'bundle.js', // Nome del file JS generato
     clean: true, // Pulisce la cartella 'Dist' prima di ogni build
-    publicPath: '/',
+    publicPath: 'Hacker-News',
   },
   module: {
     rules: [
