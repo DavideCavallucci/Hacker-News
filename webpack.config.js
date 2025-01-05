@@ -12,7 +12,6 @@ module.exports = {
     filename: 'bundle.js', // Nome del file JS generato
     path: path.resolve(__dirname, 'dist'), // Cartella di output per tutti i file
     clean: true, // Pulisce la cartella di output prima di ogni build
-    publicPath: '/Hacker-News/',
   },
 
   // Configurazione delle regole per i loader
@@ -39,6 +38,7 @@ module.exports = {
       template: './index.html', // File HTML di partenza
       favicon: './src/img/favicon.ico', // Favicon da includere
       inject: 'body', // Inserisce gli script nel body del file HTML
+      minify: false // Disabilita la minificazione
     }),
     new MiniCssExtractPlugin({
       filename: 'style.css', // Nome del file CSS generato
