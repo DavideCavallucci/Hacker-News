@@ -1,40 +1,47 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
+const Dotenv = require('dotenv-webpack'); // Per gestire le variabili d'ambiente
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // Per generare il file HTML con asset inclusi automaticamente
 
 module.exports = {
-  entry: './asset/js/app.js', // input
+  entry: './src/js/app.js', // File di ingresso principale del progetto
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js', // output
-    clean: true, // per pulire la cartella 'dist' a ogni build
+    filename: 'bundle.js', // Nome del file bundle generato
+    path: path.resolve(__dirname, 'dist'), // Cartella di output
+    clean: true, // Pulisce la cartella di output prima di ogni build
   },
   module: {
     rules: [
       {
-        test: /\.css$/, // regola per i file CSS
-        use: ['style-loader', 'css-loader'], // loader per il CSS
+        test: /\.css$/, // Regola per gestire i file CSS
+        use: ['style-loader', 'css-loader'], // Applica i loader CSS
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i, // regola per le immagini
+        test: /\.(png|jpg|jpeg|gif|ico|svg)$/i, // Per immagini e favicon
+        type: 'asset/resource', // Copia i file nella cartella di output
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i, // Per font
         type: 'asset/resource',
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html', // template di base per l'HTML
-      favicon: './asset/img/Favicon.png', // gestione della favicon automatica
+      template: './src/index.html', // File HTML di partenza
+      favicon: './src/img/favicon.ico', // Percorso della favicon
     }),
-    new Dotenv(),
+    new Dotenv(), // Per le variabili d'ambiente
   ],
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'), // cartella per il bundle
-    },
-    compress: true, // compressione gzip
-    port: 9000, // porta del server
-    open: true, // apertura automatica del browser
+  optimization: {
+    minimize: true, // Minimizza i file per l'ambiente di produzione
   },
-  mode: 'development', // modalità di sviluppo o pruduzione
+  devServer: {
+    static: './dist', // Serve i file dalla cartella di output
+    port: 3000, // Porta del server di sviluppo
+    open: true, // Apre automaticamente il browser
+  },
+  mode: 'development', // Modalità di sviluppo (o 'production' per la produzione)
+  performance: {
+    hints: false, // Disabilita i warning sulle prestazioni
+  },
 };
