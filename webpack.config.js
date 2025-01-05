@@ -19,7 +19,7 @@ module.exports = {
         test: /\.(png|jpg|jpeg|gif|ico|svg)$/i, // Gestisce immagini e favicon
         type: 'asset/resource', // Copia i file nella cartella di output
         generator: {
-          filename: 'images/[name][ext][query]' // Immagini vengono messe nella cartella "images"
+          filename: 'img/[name][ext][query]' // Immagini vengono messe nella cartella "images"
         }
       },
       {
@@ -32,7 +32,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html', // template di base per l'HTML
       favicon: './src/img/favicon.ico', // gestione della favicon automatica
-      inject: 'head', // Inserisce gli script nel body del file HTML
+      inject: 'body', // Inserisce gli script nel body del file HTML
       minify: false // Disabilita la minificazione
     }),
     new Dotenv(), // Per gestire le variabili d'ambiente da un file .env
@@ -45,7 +45,7 @@ module.exports = {
     port: 3000, // porta del server
     open: true, // apertura automatica del browser
   },
-  mode: 'development', // modalità di sviluppo o pruduzione
+  mode: 'production', // modalità di sviluppo o pruduzione
 
   // Disabilita i warning sulle dimensioni dei bundle
   performance: {

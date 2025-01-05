@@ -1,9 +1,19 @@
 import '../css/style.css';
 import { fetchNewsIDs, fetchNewsDetail } from './api';
 import { renderNews, initializeUI } from './ui';
+import logo from '../img/Logo.ico';
 
 let currentIndex = 0;
 let newsIDs = [];
+
+document.addEventListener('DOMContentLoaded', () => { // Assicura che il DOM sia caricato
+  const logoImg = document.getElementById('logo-img');
+  if (logoImg) { // Verifica che l'elemento esista
+    logoImg.src = logo;
+  } else{
+    console.error("Logo non trovato")
+  }
+});
 
 async function startApp() {
   try {
