@@ -27,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // File HTML di partenza
+      template: './index.html', // File HTML di partenza
       favicon: './src/img/favicon.ico', // Percorso della favicon
     }),
     new Dotenv(), // Per le variabili d'ambiente
