@@ -19,11 +19,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 15px;
   box-sizing: border-box;
   z-index: 10;
   border-bottom: solid 1px rgba(139, 93, 255, 0.3);
-  font-family: 'Montserrat', sans-serif !important;
   font-weight: 400 !important;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
@@ -39,7 +38,7 @@ header .logo {
 }
 
 header .btn.personal-site {
-  background: #fff;
+  background: transparent;
   color: #563A9C;
   border: 2px solid #563A9C;
   padding: 15px 25px;
@@ -59,7 +58,7 @@ header .btn.personal-site:hover {
 .container {
   position: relative;
   text-align: left;
-  width: 80%;
+  width: 90%;
   margin-top: 80px; /* Altezza dall'header */
 }
 
@@ -85,26 +84,19 @@ header .btn.personal-site:hover {
 
 h1 {
   font-family: 'Fraunces', serif;  /* Titolo con Fraunces */
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 
-/* News List Styles */
-.news-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
-
 .news-item {
-  background-color: white;
+  background-color: #FFF7D1;
   border-radius: 8px;
   border: 2px solid #8B5DFF;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: box-shadow 0.3s ease;
   padding-left: 20px;
-  padding-bottom: 15px;
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 .news-item:hover {
@@ -114,7 +106,7 @@ h1 {
 
 .news-item h2 {
   font-family: 'Fraunces', serif;  /* Titolo con Fraunces */
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #262626;  /* Viola per il titolo */
   margin-bottom: 15px;
   transition: color 0.3s ease;
@@ -191,12 +183,8 @@ footer .social:hover {
   color: #FFF7D1;
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries per Responsiveness */
 @media (max-width: 768px) {
-  .news-list {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .news-item {
     padding-left: 15px;
     padding-right: 15px;
@@ -208,10 +196,6 @@ footer .social:hover {
 }
 
 @media (max-width: 480px) {
-  .news-list {
-    grid-template-columns: 1fr;
-  }
-
   header h1 {
     font-size: 1.5rem;
   }
