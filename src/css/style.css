@@ -60,9 +60,7 @@ header .btn.personal-site:hover {
   position: relative;
   text-align: left;
   width: 80%;
-  padding: 20px;
-  margin-top: 80px; /* Altezza del header */
-  margin-bottom: 150px; /* Altezza del footer */
+  margin-top: 80px; /* Altezza dall'header */
 }
 
 /* Stile generico pulsanti */
@@ -106,7 +104,6 @@ h1 {
   transition: box-shadow 0.3s ease;
   padding-left: 20px;
   padding-bottom: 15px;
-  cursor: pointer;
   margin: 20px;
 }
 
@@ -165,6 +162,33 @@ h1 {
 #load-more-btn:hover {
   background-color: #563A9C;
   color: white;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background: rgba(38, 38, 38, 1);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+footer .social {
+  color: #fff;
+  font-size: 32px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social:hover {
+  color: #FFF7D1;
 }
 
 /* Media Queries for Responsiveness */
