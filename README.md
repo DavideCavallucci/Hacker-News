@@ -2,7 +2,7 @@
 <p>Questo è il 3° progetto eseguito per Start2impact nell'ambito dello Sviluppo Web. Attualmente sto seguendo il corso di UX/UI Design ma voglio skillarmi anche su qualche elemento di sviluppo in modo da ampliare il mio know how anche come Designer.</p>
 
 <h2>🤔 Di cosa si tratta?</h2>
-<p>Questa applicazione JavaScript mostra le ultime notizie in campo tech utilizzando l'API di <a hrfer="https://github.com/HackerNews/API">Hacker News</a>. Le notizie vengono caricate in blocchi da 10 e gli utenti possono cliccare su un pulsante per caricare ulteriori notizie.</p>
+<p>Questa applicazione JavaScript mostra le ultime notizie in campo tech utilizzando l'API di <a href="https://github.com/HackerNews/API">Hacker News</a>. Le notizie vengono caricate in blocchi da 10 e gli utenti possono cliccare su un pulsante per caricare ulteriori notizie.</p>
 
 <h2>💡 Funzionalità</h2>
 <ul>
