@@ -27,4 +27,4 @@
 
 <h2>👨🏻‍💻 Testa il progetto</h2>
 <p>Non ti resta che provare tu stesso, basta che clicchi il link qui in basso:</p>
-<a href="https://dgmichele.github.io/Hacker-news/"><strong>Vai al progetto ↗️</strong></a>
+<a href="https://davidecavallucci.github.io/Hacker-News/"><strong>Vai al progetto ↗️</strong></a>
