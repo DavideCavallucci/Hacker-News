@@ -1,4 +1,9 @@
-# Ignora il file delle variabili d'ambiente:
+# Ignora il file delle variabili d'ambiente
 .env
-# Ignora queste cartelle:
+
+# Sistema operativo
+.DS_Store
+
+# Node.js
 node_modules/
+dist/
